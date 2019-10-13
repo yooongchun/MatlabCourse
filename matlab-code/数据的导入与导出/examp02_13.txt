@@ -1,0 +1,3 @@
+Sally  Level1  12.34  45  1.23e10  inf   NaN   Yes
+Joe    Level2  23.54  60  9e19     -inf  0.001 No
+Bill   Level3  34.90  12  2e5      10    100   No

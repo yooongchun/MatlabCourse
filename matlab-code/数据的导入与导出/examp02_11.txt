@@ -1,0 +1,5 @@
+Name: xiezh Age: 18 Height: 170 Weight: 65 kg
+Name: yanlh Age: 16 Height: 160 Weight: 52 kg
+Name: liaoj Age: 15 Height: 160 Weight: 50 kg
+Name: lijun Age: 20 Height: 175 Weight: 70 kg
+Name: xiagk Age: 15 Height: 172 Weight: 56 kg
