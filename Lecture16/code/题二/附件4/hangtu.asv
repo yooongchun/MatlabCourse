@@ -1,0 +1,20 @@
+clear all;clc;
+load 'W.mat';
+load 't4.mat';
+for i = 1:209
+    t4{i,1} = double(t4{i,1}); %转化为double型
+end
+bm=t4;
+
+left=[20,21,71,82,87,133,160,172,192,202,209];
+n=21;
+
+for ci=1:18
+    [k]=panbie(W,bm,n);
+    be(ci)=k;
+    W(n,k)=inf;
+     n=k;
+     close all;
+end
+        
+        

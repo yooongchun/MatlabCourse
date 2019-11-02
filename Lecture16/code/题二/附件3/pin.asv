@@ -1,0 +1,44 @@
+clear all;clc;
+load 't3.mat';
+load 'hang.mat';
+
+left=[8,15,30,39,50,62,72,90,95,126,169]; %ÐÐÊ×
+for r=1:11
+n=left(r);
+k=0;
+for i=1:209
+    cha=sum(abs(hang(n,:)-hang(i,:)));
+        if(cha<20)
+            k=k+1;
+            b(r,k)=i;
+        end
+end
+end
+
+right=[19,37,44,60,61,75,124,142,146,177,197]; %ÐÐÎ²
+for r=1:11
+n=right(r);
+k=0;
+for i=1:209
+    cha=sum(abs(hang(n,:)-hang(i,:)));
+        if(cha<20)
+            k=k+1;
+            bw(r,k)=i;
+        end
+end
+end
+
+for i=1:11
+    for j=1:11
+        c=union(b(i,:),bw(j,:));
+        n(i,j)=length(c);
+    end
+end
+[j,k]=find(n==19);
+lian(:,1)=j;
+lian(:,2)=k;
+
+
+
+
+

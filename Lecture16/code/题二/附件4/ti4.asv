@@ -1,0 +1,20 @@
+clear all;clc;
+load 't4.mat';
+for i = 1:209
+    t4{i,1} = double(t4{i,1}); %转化为double型
+end
+bm=t4;
+
+W=inf*ones(209,209);
+afa=1;beta=1;
+for i=1:209
+    for j=1:209
+        W(i,j)=0;
+        for k=1:180
+        w=(bm{i,1}(k,72)-afa*bm{j,1}(k,1)-beta)^2/180;   %误差矩阵
+        W(i,j)=W(i,j)+w;
+        end
+    end
+end
+
+

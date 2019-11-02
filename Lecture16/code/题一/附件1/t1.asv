@@ -1,0 +1,23 @@
+clear all;clc;
+load 'ti1.mat';
+for i=1:19
+    xs(i,i)=0;
+end
+
+for i=1:19
+da(i)=max(xs(i,:));
+end
+wei=find(da==max(da));
+for i=1:19
+    k=find(xs(i,[1:19])==da(i));
+    lian(i,1)=i;
+    lian(i,2)=k;
+end
+
+lian(wei,1)=0;
+tou=lian(wei,2);
+for j=1:18
+    find(lian()==tou)
+
+
+

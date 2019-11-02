@@ -1,0 +1,37 @@
+clear all;clc;  %imwrite
+cell{1,1}=imread('000.bmp');
+cell{1,2}=imread('001.bmp');
+cell{1,3}=imread('002.bmp');
+cell{1,4}=imread('003.bmp');
+cell{1,5}=imread('004.bmp');
+cell{1,6}=imread('005.bmp');
+cell{1,7}=imread('006.bmp');
+cell{1,8}=imread('007.bmp');
+cell{1,9}=imread('008.bmp');
+cell{1,10}=imread('009.bmp');
+cell{1,11}=imread('010.bmp');
+cell{1,12}=imread('011.bmp');
+cell{1,13}=imread('012.bmp');
+cell{1,14}=imread('013.bmp');
+cell{1,15}=imread('014.bmp');
+cell{1,16}=imread('015.bmp');
+cell{1,17}=imread('016.bmp');
+cell{1,18}=imread('017.bmp');
+cell{1,19}=imread('018.bmp');
+
+for i=1:19
+level=graythresh(cell{1,i});
+cell1{1,i}=im2bw(cell{1,i},level);
+end
+
+for i=1:19
+    for k=1:19
+        xs(i,k)=0;
+    for j=1:1980
+        if(cell1{1,i}(j,72)==cell1{1,k}(j,1))
+            xs(i,k)=1+xs(i,k);
+        end
+    end
+    end
+end
+
