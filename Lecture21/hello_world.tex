@@ -1,0 +1,5 @@
+\documentclass{article}
+% 这里是导言区
+\begin{document}
+Hello, world!
+\end{document}
